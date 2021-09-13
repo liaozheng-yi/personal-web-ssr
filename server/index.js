@@ -20,9 +20,11 @@ async function createServer() {
                 'utf-8'
             )
             template = await vite.transformIndexHtml(url, template)
-            const { render } = await vite.ssrLoadModule('/src/entry-server.ts')
+            const { render } = await vite.ssrLoadModule('/src/entry-server.js')
             const { appHtml, cssHtml } = await render(url)
-            const html = template.replace(`<!--ssr-outlet-->`, appHtml).replace(`<!--css-outlet-->`, cssHtml)
+            const html = template
+                .replace(`<!--ssr-outlet-->`, appHtml)
+                .replace(`<!--css-outlet-->`, cssHtml)
             res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
         } catch (e) {
             vite.ssrFixStacktrace(e)

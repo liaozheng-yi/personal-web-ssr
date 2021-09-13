@@ -1,5 +1,8 @@
 <template>
-  <div>welcome to ssr world</div>
+ <div>
+   <router-link to='/'>home</router-link>
+   <router-link to='/about'>about</router-link>
+ </div>
 </template>
 
 <script lang="ts" setup>
