@@ -12,7 +12,7 @@ export function createStore() {
           setTimeout(() => {
             state.message = "hello you did";
             resolve(0);
-          }, 200);
+          }, 3000);
         });
       },
     },
