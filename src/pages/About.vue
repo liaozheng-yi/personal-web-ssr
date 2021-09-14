@@ -12,14 +12,6 @@ export default defineComponent({
       list,
     };
   },
-  async asyncData() {
-    const data = await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(["22", "33", "44", "55"]);
-      }, 3000);
-    });
-    this.list = ref(data);
-  },
 });
 </script>
 
