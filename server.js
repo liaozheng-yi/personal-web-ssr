@@ -16,7 +16,7 @@ async function createServer() {
 
         try {
             let template = fs.readFileSync(
-                path.resolve(__dirname, '..', 'index.html'),
+                path.resolve(__dirname, 'index.html'),
                 'utf-8'
             )
             template = await vite.transformIndexHtml(url, template)
