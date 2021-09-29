@@ -3,6 +3,7 @@
   <div>{{ store.state.message }}</div>
 </template>
 <script lang="ts">
+import { NThemeEditor } from "naive-ui";
 import { defineComponent } from "vue";
 import { useStore } from "vuex";
 
