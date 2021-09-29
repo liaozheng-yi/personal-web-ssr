@@ -12,7 +12,7 @@ export default defineComponent({
       //you can inject api request here
       setTimeout(() => {
         resolve(["11", "22", "33", "44", "55", "66"]);
-      }, 500);
+      }, 2000);
     });
     list.value = res;
     return {

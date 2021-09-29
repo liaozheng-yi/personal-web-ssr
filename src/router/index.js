@@ -16,18 +16,18 @@ import {
 // })
 
 const routes = [
-    { path: '/', redirect: '/home' },
+    { path: '/', redirect: '/index' },
     {
         path: '/',
-        component: () => import("../layout/base.vue"),
+        component: () => import("../layout/BaseLayout.vue"),
         children: [
             {
-                path: '/home',
-                component: () => import('../pages/Home.vue')
+                path: '/index',
+                component: () => import('../pages/index.vue')
             },
             {
                 path: '/about',
-                component: () => import('../pages/About.vue')
+                component: () => import('../pages/about.vue')
             },
         ]
     },

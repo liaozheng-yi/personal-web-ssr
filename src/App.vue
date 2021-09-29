@@ -1,15 +1,15 @@
 <template>
-  <!-- <router-view v-slot="{ Component }">
-    <Suspense>
-      <component :is="Component" />
-    </Suspense>
-  </router-view> -->
   <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
     <n-loading-bar-provider>
       <n-message-provider>
         <n-notification-provider>
           <n-dialog-provider>
-            <router-view></router-view>
+            <router-view v-slot="{ Component }">
+              <Suspense>
+                <component :is="Component" />
+              </Suspense>
+            </router-view>
+            <!-- <router-view></router-view> -->
           </n-dialog-provider>
         </n-notification-provider>
       </n-message-provider>
